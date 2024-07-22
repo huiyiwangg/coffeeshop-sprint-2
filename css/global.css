@@ -263,7 +263,7 @@ a {
 }
 .discount__container-image {
   flex: 0 1 45%;
-  background: url(/asset/images/coldbrewbackground.png) center center no-repeat;
+  background: url(./asset/images/coldbrewbackground.png) center center no-repeat;
   position: absolute;
   width: 400px;
   height: 400px;
