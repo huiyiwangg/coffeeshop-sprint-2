@@ -1,9 +1,4 @@
-// color-variables
-$neutral-black:#393939;
-$neutral-grey:#909090;
-$light-grey:#F7F7F7;
-$primary-pink: #fff0ed;
-$primary-blue:#5bacc3;
+@use './partials/global' as *;
 
 // Animations
 @keyframes rotate {
@@ -98,6 +93,7 @@ a{
   display: flex; 
   align-items: center;
   justify-content: space-between;
+  
 
   :nth-child(0) {
     align-self: flex-start;
@@ -132,16 +128,16 @@ a{
     justify-content: space-evenly;
   }
   
-  .primary-nav__item {
+  &__item {
     display: inline;
   }
   
-  .primary-nav__item a {
+  &__item a {
     text-decoration: none;
     color: #393939;
   }
   
-  #primary-nav__item--highlight {
+  #primary-nav__item--highlight{
     text-decoration: none;
     color: #5bacc3;
   }
@@ -271,6 +267,7 @@ a{
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    padding: 5rem;
   }
 
   &__text{
@@ -291,7 +288,7 @@ a{
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
   }
 
@@ -306,7 +303,7 @@ a{
   &__container-image {
     flex: 0 1 45%;
     background: 
-      url(./asset/images/coldbrewbackground.png) center center no-repeat;
+      url(/asset/images/coldbrewbackground.png) center center no-repeat;
     position: absolute;
     width: 400px;
     height: 400px;
@@ -353,6 +350,18 @@ a{
   justify-content: center;
   gap: 10rem;
   padding: 5rem;
+
+  &__logo{
+    display: flex;
+    align-items: flex-start;
+    padding: 0%;
+    margin: 0;
+    width: 10rem;
+    height: 10rem;
+    opacity: 50%;
+    position: relative;
+    left: 0%;
+  }
 }
 
 .footer__list-item {

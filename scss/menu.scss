@@ -1,3 +1,5 @@
+@use './partials/global' as *;
+
 // color-variables
 $neutral-black:#393939;
 $neutral-grey:#909090;
@@ -5,90 +7,94 @@ $light-grey:#F7F7F7;
 $primary-pink: #fff0ed;
 $primary-blue:#5bacc3;
 
-h1, h2{
-    font-weight: 300;
-    font-size: 60px;
-  }
 
-body {
-    font-family: "Open Sans";
-    font-weight: 400;
-    background-color: white;
-    margin: 0;
-  }
-  
-  .primary-nav {
-    background-color: #fff0ed;
-    display: flex;
+.primary-nav{
+    background-color: $primary-pink;
+    display: flex; 
     align-items: center;
-  }
-  
-  .nav-header {
-    font-weight: 300;
-    font-size: 2rem;
-    background-color: #fff0ed;
-    display: inline;
-  }
-  
-  
-  
-  .primary-nav__list {
+    justify-content: space-between;
+    
+
+    :nth-child(0) {
+    align-self: flex-start;
+    }
+
+    :nth-child(1) {
+    align-self: flex-end;
+    }
+
+    &__head{
+    display: flex;
+    flex-direction: row;
+    }
+
+    &__logo{
+    height: auto;
+    max-height: 100%;
+    margin-bottom: 6.5rem;
+    justify-content: center;
+    }
+
+    &__header {
+    height: 2em;
+    line-height: 1;
+    }
+    
+    &__list {
     list-style-type: none;
     font-size: 1rem;
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    }
+    
+    &__item {
     display: inline;
-  }
-  
-  .primary-nav__link {
-    padding: 1rem;
-  }
-  
-  .primary-nav__item {
-    display: inline;
-  }
-  
-  .primary-nav__item a {
+    }
+    
+    &__item a {
     text-decoration: none;
     color: #393939;
-  }
-  
-  #primary-nav__item--highlight {
+    }
+    
+    &__item--highlight {
     text-decoration: none;
     color: #5bacc3;
-  }
-  
-  .site-header {
+    }
+}
+.site-header {
     background-color: white;
     font-family: "Open Sans";
     color: #393939;
-  }
-  
-  .menu-nav {
-    background-color: #393939;
+}
+
+.menu-nav {
+background-color: #393939;
     color: #f7f7f7;
     background-size: cover;
     position: relative;
     display: flex;
-    margin: 0;
-  }
-  
-  .menu-nav-image {
+margin: 0;
+}
+
+.menu-nav-image {
     width: 100%;
     height: 700px;
     background-position: center;
     background-size: cover;
     object-fit: cover;
-  }
-  
-  .menu-nav__list {
+}
+
+.menu-nav__list {
     background-color: #393939;
     position: relative;
     display: flex;
     align-items: center;
     margin: 1rem auto 1rem auto;
-  }
-  
-/
-  .menu-nav__title {
+}
+
+
+.menu-nav__title {
     background: transparent;
     color: white;
     padding: 20px;
@@ -106,9 +112,9 @@ body {
     top:30%;
     left: 50%;
     transform: translate(-50%, 0);
-  }
-  
-  .menu-nav__title::before {
+}
+
+.menu-nav__title::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -117,78 +123,78 @@ body {
     z-index: -1;
     pointer-events: none;
     transform: translate(-5px, -5px);
-  }
-  
-  .menu-nav__item {
+}
+
+.menu-nav__item {
     list-style-type: none;
     color: #f7f7f7;
     text-align: center;
-  }
-  
-  .menu-nav__item a {
+}
+
+.menu-nav__item a {
     text-decoration: none;
     color: #f7f7f7;
     font-size: 1.25rem;
     text-transform: uppercase;
     display: inline-block;
     padding: 0 0.5rem 0 0.5rem;
-  }
-  
-  .menu-nav__link {
+}
+
+.menu-nav__link {
     text-decoration: none;
     color: #f7f7f7;
     font-size: 1.25rem;
     text-transform: uppercase;
     display: inline-block;
-  }
-  
-  .drink__list {
+}
+
+.drink__list {
     text-align: center;
     font-weight: 300;
     font-size: 3.125rem;
     padding: 2rem;
-  }
-  
-  .hot-drinks__item,
-  .cold-drinks__item,
-  .pastries__item {
+    margin-top: 0;
+}
+
+.hot-drinks__item,
+.cold-drinks__item,
+.pastries__item {
     list-style-type: none;
     text-align: center;
     font-size: 1.875rem;
     font-weight: 300;
-  }
-  
-  .hot-drinks__list,
-  .cold-drinks__list,
-  .pastries__list {
-    padding: 0;
+}
+
+.hot-drinks__list,
+.cold-drinks__list,
+.pastries__list {
+padding: 0;
     margin: 0;
-  }
-  
-  .product-detail__container {
+}
+
+.product-detail__container {
     padding: 0;
-  }
-  
-  .product-price {
+}
+
+.product-price {
     color: #5bacc3;
     text-align: center;
     margin-bottom: 0;
-  }
-  
-  .product-detail {
+}
+
+.product-detail {
     font-style: italic;
     width: 400px;
     text-align: center;
     margin: 0 auto 0 auto;
-  }
-  
-  .hot_container,
-  .pastries_container {
+}
+
+.hot_container,
+.pastries_container {
     background-color: #fff0ed;
     margin:0;
-  }
-  
-  .cold_container {
+}
+
+.cold_container {
     background-color: #f7f7f7;
-  }
-  
+}
